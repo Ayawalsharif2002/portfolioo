@@ -1,0 +1,647 @@
+/* الضبط العام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background: #2c3e50;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid #2c3e50;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #2c3e50;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    margin-right: 15px;
+}
+
+.btn-outline:hover {
+    background: #2c3e50;
+    color: #fff;
+}
+
+section {
+    padding: 100px 20px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #2c3e50;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background: #3498db;
+}
+
+/* شريط التنقل */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.burger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* قسم الرئيسية */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 50px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 120%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.hero h1 span {
+    color: #3498db;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* قسم عني */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+.about p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-left: 10px;
+}
+
+.info-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* قسم المهارات */
+.skills {
+    background: #f5f5f5;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.skill-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-item p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: #3498db;
+    border-radius: 10px;
+}
+
+/* قسم المشاريع */
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 8px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.filter-btn.active {
+    background: #3498db;
+    color: #fff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 152, 219, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #fff;
+    color: #3498db;
+}
+
+/* قسم تواصل معي */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #3498db;
+    margin-left: 15px;
+}
+
+.info-item p {
+    margin: 0;
+    color: #555;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* تذييل الصفحة */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 70px 20px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ddd;
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        padding-left: 0;
+        margin-top: 50px;
+    }
+    
+    .hero h1, .hero h2, .hero p {
+        text-align: center;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero h2 {
+        font-size: 20px;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about, .contact-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-outline {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
